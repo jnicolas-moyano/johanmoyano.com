@@ -5,34 +5,35 @@ body {
     color: #fff;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
 }
 
 .info {
-    position: fixed;
-    top:20px;
-    left:20px;
-    display:flex;
+    position: relative; /* Cambiado de fixed a relative */
+    display: flex;
     align-items: center;
     background-color: #64101041;
-    padding: 20px; 
+    padding: 20px;
     border-radius: 50px;
-    width:450px;
+    width: 80vw; /* Ajuste relativo al ancho de la ventana */
+    max-width: 450px;
+    margin-top: 20px;
 }
 
 .img-nav {
-    margin-right:20px;
+    margin-right: 20px;
 }
 
 .img-nav img {
     border-radius: 50%;
-    width: 175px;
-    height: 175px;
+    width: 150px;
+    height: 150px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 nav {
     margin-top: 30px;
-    margin-left: 35px;
+    margin-left: 20px;
 }
 
 nav ul {
@@ -47,10 +48,10 @@ nav ul {
 nav ul li a {
     color: #550c0c;
     font-family: 'Lora';
-    font-size: 18px;
-    text-shadow: 
+    font-size: 1.2rem;
+    text-shadow:
         1px 1px 2px #000,
-        0 0 6px #ffffff17, 
+        0 0 6px #ffffff17,
         0 0 6px #0000005b;
 }
 
@@ -63,80 +64,73 @@ nav ul li a:hover {
 }
 
 .intro h1 {
-    font-size:2.5em;
+    font-size: 2rem;
     font-family: 'Lora';
     color: #550c0c;
-    text-shadow: 
+    text-shadow:
         1px 1px 2px #000,
-        0 0 6px #ffffff17, 
+        0 0 6px #ffffff17,
         0 0 8px #0000005b;
 }
 
 .intro h3 {
     margin-top: -15px;
     font-family: 'Lora';
-    font-size: 21px;
+    font-size: 1.2rem;
     color: #07213f;
-    text-shadow: 
+    text-shadow:
         1px 1px 2px #000,
-        0 0 6px #ffffff17, 
+        0 0 6px #ffffff17,
         0 0 8px #0000005b;
 }
 
-.intro h3:hover {
-    color: #0c3666;
-}
-
 .intro p {
-    font-size:18px;
+    font-size: 1rem;
     font-family: 'Lato';
 }
 
 main {
-    flex:1;
-    margin-left: 600px; 
+    flex: 1;
+    width: 90vw; /* Ajuste relativo al ancho de la ventana */
+    max-width: 800px;
+    margin-top: 20px;
 }
 
 main section {
-    margin-bottom: 40px;
-    border-radius: 30px;
+    margin-bottom: 20px;
+    border-radius: 20px;
     padding: 20px;
     background-color: #062b5341;
-    margin-right: 20px;
-}
-
-#experience {
-    margin-top: 20px;
 }
 
 main section h2 {
     font-family: 'Lora';
-    font-size: 2.2em;
+    font-size: 1.5rem;
     color: #550c0c;
-    margin-bottom: 25px;
-    text-shadow: 
+    margin-bottom: 20px;
+    text-shadow:
         1px 1px 2px #000,
-        0 0 6px #ffffff17, 
+        0 0 6px #ffffff17,
         0 0 8px #0000005b;
 }
 
 main section li {
     font-family: 'Manrope';
-    font-size: 20px;
+    font-size: 1.2rem;
     color: #ffffffd2;
-    text-shadow: 
+    text-shadow:
         1px 1px 2px #000,
-        0 0 6px #ffffff17, 
+        0 0 6px #ffffff17,
         0 0 8px #0000005b;
 }
 
 main section h3 {
     font-family: 'Lora';
-    font-size: 18px;
+    font-size: 1.1rem;
     color: #082647;
-    text-shadow: 
+    text-shadow:
         1px 1px 2px #000,
-        0 0 6px #ffffff17, 
+        0 0 6px #ffffff17,
         0 0 20px #0000005b;
 }
 
@@ -145,12 +139,12 @@ main section h3:hover {
 }
 
 main section p {
-    font-size: 15px;
+    font-size: 1rem;
     font-family: 'Raleway';
 }
 
 footer {
-    width:100%;
+    width: 100%;
     padding: 20px;
     background-color: #000000;
     text-align: center;
@@ -162,17 +156,36 @@ footer {
 footer p {
     margin: 0;
     font-family: 'Raleway';
-    font-size: 12px;
+    font-size: 0.8rem;
 }
 
 .light {
     position: absolute;
-    width: 300px;
-    height: 300px;
-    margin-top: -150px;
-    margin-left: -150px;
-    background: radial-gradient(circle, rgba(250, 214, 165, 0.9) 0%, rgba(255,255,255,0) 70%);
+    width: 150px;
+    height: 150px;
+    margin-top: -75px;
+    margin-left: -75px;
+    background: radial-gradient(circle, rgba(250, 214, 165, 0.9) 0%, rgba(255, 255, 255, 0) 70%);
     pointer-events: none;
     mix-blend-mode: overlay;
     z-index: 10000;
+}
+
+@media (min-width: 768px) {
+    .info {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 450px;
+    }
+
+    .img-nav img {
+        width: 175px;
+        height: 175px;
+    }
+
+    main {
+        margin-left: 600px;
+        margin-right: 20px;
+    }
 }
