@@ -101,6 +101,14 @@ main section {
     border-radius: 20px;
     padding: 20px;
     background-color: #062b5341;
+<<<<<<< HEAD
+=======
+    margin-right: 20px;
+}
+
+#experience {
+    margin-top: 20px;
+>>>>>>> 689da18e61c7d80277caa4184618c8886a098522
 }
 
 main section h2 {
